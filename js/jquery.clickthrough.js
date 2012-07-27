@@ -44,7 +44,12 @@
                 $this_slide = $(slide);
 
             //wrap the slide content into a central box
-            $(this).wrapInner('<div class="slide-content" />');
+//wrap the slide content into a central box to suit our 
+            //resolution and make the clickable slide full width and height
+            $(this)
+              .wrapInner('<div class="slide-content" />')
+              .css('width', '100%')
+              .css('min-height', window.innerHeight + 'px');
             $('div.slide-content')
               .css('width', settings.slide_width)
               .css('min-height', settings.slide_height)
