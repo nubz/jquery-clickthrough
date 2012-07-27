@@ -1,5 +1,12 @@
  /**
- * jquery.clickthrough
+ * jQuery Clickthrough Plugin v1.0
+ * https://github.com/nubz/jquery-clickthrough
+ *
+ * Copyright 2011, Alistair Macdonald
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.opensource.org/licenses/GPL-2.0
+ *
  * Creates a 'click-through' presentation from a collection of slides
  * configurable options include 'control_lis' which, if set to true,
  * will reveal <li> elements one by one with each click until all are showing
@@ -14,7 +21,6 @@
  *     'slide_height' : '550px'
  *    });
  *
- * Author: Alistair Macdonald
  */
 
 (function($) {
@@ -37,8 +43,7 @@
                 li_tracker = 0,
                 $this_slide = $(slide);
 
-            //wrap the slide content into a central box to suit our 
-            //resolution and we can click anywhere on the screen to advance
+            //wrap the slide content into a central box
             $(this).wrapInner('<div class="slide-content" />');
             $('div.slide-content')
               .css('width', settings.slide_width)
