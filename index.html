@@ -1,0 +1,89 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>jquery.clickthrough.js demo</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/demo.css" />
+</head>
+<body>
+	<div class="slide">
+        <h1>
+            Clickthrough Slide Presenter Demo
+        </h1>
+        <h3>
+            click on screen to proceed...
+        </h3>                
+    </div>
+    <div class="slide">
+        <h2>
+            What is jquery.clickthrough.js?
+        </h2>
+        <ul>
+            <li class="intro">
+               A tiny jQuery plugin that:
+            </li>
+            <li>
+                converts a collection of HTML slides into a presentation
+            </li>
+            <li>
+                that can be 'clicked' through
+            </li>
+            <li>
+                to either reveal list items one by one and/or 
+            </li>
+            <li>
+                whole slides one by one
+            </li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>
+            What can it contain?
+        </h2>
+        <ul>
+            <li class="intro">
+                Slides, which are HTML elements with a common CSS class
+            </li>
+            <li>
+                they can contain any HTML content including images and video
+            </li>
+            <li>
+                for example:
+            </li>
+            <li>
+                <span class="code">$('div.slide')</span> is a jQuery collection of all divs to be used as slides
+            </li>
+            <li>
+                it's as simple as <span class="code">$('div.slide').clickthrough();</span>
+            </li>        
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>
+            This is the last slide in the demo
+        </h2>
+        <ul>
+            <li>
+                so here's an image:
+            </li>
+            <li class="cont">
+                <img src="img/ruth-the-acrobat.jpg" alt="Ruth the Acrobat" />
+            </li>
+        </ul>
+    </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="js/jquery.clickthrough.js"></script>
+  <script>
+    $('div.slide').clickthrough({
+        'slide_width': '640px',
+        'control_lis': true
+	});
+  </script>
+</body>
+</html>
